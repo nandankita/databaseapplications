@@ -24,6 +24,10 @@ app.get('/',function (req,res){
  res.send('hello');
 })
 
+app.get("/env", function (req, res) {
+    res.json(process.env);
+});
+
 app.get("/seqs", function(req,res){
 	db.applications.find(function(err, docs){
 		res.json(docs);
