@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var mongodbConnectionString = "mongodb://admin:2uhHW6PewWEc@127.12.162.130:27017/databaseapplications";
+var mongodbConnectionString = "mongodb://admin:2uhHW6PewWEc@127.10.242.130:27017/databaseapplications";
 if (typeof process.env.OPENSHIFT_MONGODB_DB_URL == "undefined") {
     mongodbConnectionString = "webdev";
 }
